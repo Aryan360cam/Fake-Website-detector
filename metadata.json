@@ -1,0 +1,8 @@
+{
+  "name": "PhishGuard Fake Website Detector",
+  "description": "Comprehensive client-side security scanner that detects fraudulent websites, typosquatting lookalikes, phishing domains, and deceptive scam patterns with zero backend dependencies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

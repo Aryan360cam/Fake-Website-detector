@@ -1,0 +1,68 @@
+import { PresetSample } from '../types/detector';
+
+export const PRESET_SAMPLES: PresetSample[] = [
+  {
+    id: 'chase_phish',
+    category: 'Banking Phishing',
+    title: 'Chase Banking Credential Harvest',
+    url: 'https://chase-online-verify-security.xyz/login/auth',
+    expectedRisk: 'dangerous',
+    description: 'Employs combo-squatting with high-abuse .xyz TLD to steal banking credentials and 2FA SMS tokens.',
+  },
+  {
+    id: 'apple_homoglyph',
+    category: 'Brand Impersonation',
+    title: 'Apple ID Cyrillic Homoglyph (IDN)',
+    url: 'https://xn--appl-43d.com/id/sign-in',
+    expectedRisk: 'dangerous',
+    description: 'Uses Cyrillic "а" (U+0430) in punycode format. Appears as "appӏe.com" to deceive human eyes.',
+  },
+  {
+    id: 'metamask_drainer',
+    category: 'Crypto Drainer',
+    title: 'MetaMask Secret Phrase Drainer',
+    url: 'https://metamask-restore-phrase-wallet.space/connect',
+    expectedRisk: 'dangerous',
+    description: 'Phishing portal impersonating MetaMask wallet recovery to steal 12-word seed phrases.',
+  },
+  {
+    id: 'nike_counterfeit',
+    category: 'Fake E-Commerce',
+    title: 'Nike 80% Off Clearance Storefront',
+    url: 'https://nike-official-outlet-clearance80.shop',
+    expectedRisk: 'high_risk',
+    description: 'Fraudulent storefront mimicking Nike clearance pricing to collect credit cards without delivering goods.',
+  },
+  {
+    id: 'ms_tech_support',
+    category: 'Tech Support Scam',
+    title: 'Microsoft Defender Alert / Toll-Free',
+    url: 'https://microsoft-security-defender-alert.info/trojan-lock',
+    expectedRisk: 'dangerous',
+    description: 'Browser lock-screen scam falsely claiming malware infection and urging victims to call a call center.',
+  },
+  {
+    id: 'ip_http_insecure',
+    category: 'Banking Phishing',
+    title: 'Raw IP Host + Plain HTTP Port',
+    url: 'http://192.168.1.45:8443/paypal/signin@attacker.com',
+    expectedRisk: 'dangerous',
+    description: 'Combines raw IP hostname, plain HTTP protocol, atypical port, and the "@" credential bypass trick.',
+  },
+  {
+    id: 'github_verified',
+    category: 'Verified Safe',
+    title: 'GitHub Official Platform',
+    url: 'https://github.com',
+    expectedRisk: 'safe',
+    description: 'Legitimate apex enterprise platform with verified identity, valid TLS certificate, and clean architecture.',
+  },
+  {
+    id: 'wikipedia_verified',
+    category: 'Verified Safe',
+    title: 'Wikipedia Foundation',
+    url: 'https://en.wikipedia.org/wiki/Phishing',
+    expectedRisk: 'safe',
+    description: 'Recognized global non-profit encyclopedia with verified domain credentials.',
+  },
+];
